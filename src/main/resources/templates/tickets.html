@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>tickets</title>
+    <link rel="stylesheet" href="tickets.css">
+
+</head>
+<body>
+<H1 style="text-align: center">Pay on the spot</H1>
+
+<H1 style="text-align: center">______________________________________________</H1>
+<h3 style="color: #8c0909; text-align: center" th:text="${msg}"></h3>
+<h3 style="color: #8c0909; text-align: center" th:text="${msg1}"></h3>
+<div class="login-page">
+    <div class="form">
+        <form class="login-form acrylic" action="/buy" method="post">
+            <span>Buy your tickets</span>
+            <input name="name" type="text" placeholder="Name" required="required"/>
+            <input name="email" type="text" placeholder="Email" required="required"/>
+            <input name="ticketSize" type="number" placeholder="tokens size" required="required"/>
+            <input name="address" type="text" placeholder="address for order" required="required"/>
+            <button type="submit">Buy</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    $('.message a').click(function () {
+        $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+    });
+</script>
+</body>
+</html>
